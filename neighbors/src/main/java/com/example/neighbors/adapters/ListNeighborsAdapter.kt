@@ -26,7 +26,7 @@ class ListNeighborsAdapter(
         // Display Neighbour Name
         holder.mNeighbourName.text = neighbour.name
     }
-
+//lucie
     override fun getItemCount(): Int {
         return mNeighbours.size
     }
