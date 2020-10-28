@@ -14,7 +14,8 @@ import com.example.neighbors.R
 import com.example.neighbors.models.Neighbor
 
 class ListNeighborsAdapter(
-    items: List<Neighbor>
+    items: List<Neighbor>, private val handlers: ListNeighborHandler
+
 ) : RecyclerView.Adapter<ListNeighborsAdapter.ViewHolder>() {
     private val mNeighbours: List<Neighbor> = items
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,10 +25,13 @@ class ListNeighborsAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+
+
         val neighbour: Neighbor = mNeighbours[position]
         // Display Neighbour Name
         holder.mNeighbourName.text = neighbour.name
-
+0
         val context = holder.itemView.context
         // Display Neighbour Avatar
         Glide.with(context)
@@ -38,6 +42,10 @@ class ListNeighborsAdapter(
             .skipMemoryCache(false)
             .into(holder.mNeighbourAvatar)
 
+        holder.mDeleteButton.setOnClickListener {
+            handlers.onDeleteNeighbor(neighbour)
+
+        }
 
     }
     override fun getItemCount(): Int {
