@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">neighbors</string>
+    <string name="image">Image</string>
+    <string name="name">Name</string>
+    <string name="telephone">Telephone</string>
+    <string name="webSte">Web Site</string>
+    <string name="address">Adresse</string>
+    <string name="aPropos">A propos de moi</string>
+    //Errors
+
+    <string name="error_tel">Le téléphone doit être au format (06 ou 07) XX XX XX XX</string>
+    <string name="error_urlImage">URL non valide</string>
+    <string name="error_urlwebSite">URL non valide</string>
+
+    //titres
+    <string name="listNeighbors_fragment">Liste des Voisins</string>
+    <string name="addNeighbour_fragment">Ajouter Un Voisin</string>
+
 </resources>

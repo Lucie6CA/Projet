@@ -6,19 +6,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.neighbors.NavigationListener
 import com.example.neighbors.R
 import com.example.neighbors.adapters.ListNeighborHandler
 import com.example.neighbors.adapters.ListNeighborsAdapter
 import com.example.neighbors.data.NeighborRepository
 import com.example.neighbors.models.Neighbor
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListNeighborsFragment: Fragment(), ListNeighborHandler {
     private lateinit var recyclerView: RecyclerView
-
+    private lateinit var click_addButton: FloatingActionButton
     /**
      * Fonction permettant de définir une vue à attacher à un fragment
      */
@@ -36,13 +39,26 @@ class ListNeighborsFragment: Fragment(), ListNeighborHandler {
                 DividerItemDecoration.VERTICAL
             )
         )
+        click_addButton= view.findViewById(R.id.addButton)
+
         return view    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as? NavigationListener)?.let {
+            it.updateTitle(R.string.listNeighbors_fragment)
+        }
+
         val neighbors = NeighborRepository.getInstance().getNeighbours()
         val adapter = ListNeighborsAdapter(neighbors, this)
         recyclerView.adapter = adapter
+
+        click_addButton.setOnClickListener{
+            (activity as? NavigationListener)?.let{
+                it.showFragment(AddNeighbourFragment())
+            }
+        }
     }
 
     override fun onDeleteNeighbor(neighbor: Neighbor) {

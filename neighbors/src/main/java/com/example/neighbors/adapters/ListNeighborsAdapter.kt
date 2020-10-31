@@ -26,8 +26,6 @@ class ListNeighborsAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-
-
         val neighbour: Neighbor = mNeighbours[position]
         // Display Neighbour Name
         holder.mNeighbourName.text = neighbour.name
