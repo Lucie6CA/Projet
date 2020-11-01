@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">neighbors</string>
+    <string name="app_name">Voisins</string>
     <string name="image">Image</string>
-    <string name="name">Name</string>
-    <string name="telephone">Telephone</string>
-    <string name="webSte">Web Site</string>
+    <string name="name">Nom</string>
+    <string name="telephone">Téléphone</string>
+    <string name="webSte">Site Web</string>
     <string name="address">Adresse</string>
     <string name="aPropos">A propos de moi</string>
+
+    <string name="toast">Veuillez compléter toutes les informations</string>
+
     //Errors
 
     <string name="error_tel">Le téléphone doit être au format (06 ou 07) XX XX XX XX</string>

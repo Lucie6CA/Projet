@@ -70,7 +70,7 @@ class AddNeighbourFragment : Fragment(){
 
         //SI TOUS LES CHAMPS NE SONT PAS REMPLIS, AFFICHER UN TOAST
         if (text_about.text.isBlank() || text_address.text.isBlank() || text_webSite.text.isBlank() || text_name.text.isBlank() || text_telephone.text.isBlank() || text_urlImage.text.isBlank() ){
-            Toast.makeText(view.context, "Veuillez compléter toutes les informations", Toast.LENGTH_LONG).show()
+            Toast.makeText(view.context, R.string.toast, Toast.LENGTH_LONG).show()
             click_saveButton.setEnabled(false);
 
         }

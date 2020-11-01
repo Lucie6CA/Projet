@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">neighbors</string>
+    <string name="image">Image</string>
+    <string name="name">Name</string>
+    <string name="telephone">Phone</string>
+    <string name="webSte">Web Site</string>
+    <string name="address">Address</string>
+    <string name="aPropos">About me</string>
+
+    //toast pour les infos dans add
+    <string name="toast">Please complete all information</string>
+
+    //Errors
+
+    <string name="error_tel">The phone number must be in the format (06 or 07) XX XX XX XX</string>
+    <string name="error_urlImage">Invalid URL</string>
+    <string name="error_urlwebSite">Invalid URL</string>
+
+    //titres
+    <string name="listNeighbors_fragment">List of neighbors</string>
+    <string name="addNeighbour_fragment">Add a neighbor</string>
+
+</resources>
